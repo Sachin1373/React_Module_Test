@@ -107,6 +107,7 @@ body {
   .left-container {
       width: 100%; 
       padding: 15px;
+      height: 100vh;
       
   }
   .left-container p{

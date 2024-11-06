@@ -131,7 +131,7 @@ textarea::placeholder {
 @media (max-width: 768px) {
   .right-container {
     width: 100%; 
-    height: 800px;
+    height: 100vh;
   }
   .back{
     display: block;

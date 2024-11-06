@@ -1,0 +1,173 @@
+.notes-section::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.notes-section::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.notes-section::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
+.notes-section::-webkit-scrollbar-track {
+  background:#000000A1;
+  border-radius: 4px;
+}
+.right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 735px;
+  width: 75%;
+  background-color: #DAE5F5;
+  border-radius: 0px 8px;
+}
+
+.back{
+  height: 25px;
+  width: 25px;
+  display: none;
+  
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  height: 75px;
+  padding-left: 10px;
+  background-color: #001F8B;
+  color: white;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  background-color: #001F8B;
+  border-radius: 0px 0px 0px 8px;
+}
+
+.input-section textarea {
+  width: 95%;
+  height: 130px;
+  border: none;
+  font-family: Roboto;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+textarea::placeholder {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.send {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: 30%;
+  left: -5%;
+  cursor: pointer;
+}
+
+.notes-section {
+  padding-top: 20px;
+  height: 600px;
+  background-color: #DAE5F5;
+  padding-left: 20px;
+  overflow-y: auto;
+  overflow-x: hidden; 
+}
+
+.notes-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+
+.notes-section li {
+  display: flex;
+  position: relative;
+  background-color: white;
+  height: 210px;
+  font-family: "Roboto";
+  padding-top: 10px;
+  border-radius: 5px;
+  list-style: none;
+  box-shadow: 0px 4px 20px 0px #00000040;
+}
+
+.date-time {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.note-text {
+  margin-left: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .right-container {
+    width: 100%; 
+    height: 800px;
+  }
+  .back{
+    display: block;
+  }
+  .notes-section {
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .notes-section ul {
+    width: 100%; 
+    padding-right: 10px;
+  }
+
+  .notes-section li {
+    width: 100%; 
+    padding-right: 18px;
+  }
+
+  .input-section {
+    width: 100%;
+    height: 180px;
+  }
+
+  .input-section textarea {
+    margin-left: 15px;
+    width: calc(100% - 40px); 
+  }
+
+  .send {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    color: #001F8B;
+    top: 28%;
+    left: -10%;
+    cursor: pointer;
+  }
+}

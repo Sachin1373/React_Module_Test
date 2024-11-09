@@ -3,12 +3,10 @@ import { IoSend } from "react-icons/io5";
 import { FaArrowLeft } from "react-icons/fa6";
 import './Right.css';
 
-function Right({ selectedgroup,Goback }) {
+function Right({ selectedgroup, Goback }) {
   const [notes, setNotes] = useState('');
   const [groupNotes, setGroupNotes] = useState([]);
 
-
- 
   useEffect(() => {
     const loadedNotes = JSON.parse(localStorage.getItem(selectedgroup.name)) || [];
     setGroupNotes(loadedNotes);
@@ -17,9 +15,9 @@ function Right({ selectedgroup,Goback }) {
   const handleInputChange = (e) => {
     setNotes(e.target.value);
   };
-  
-  const handleKeyDown = (e) =>{
-    if(e.key==='Enter' && notes.trim()){
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && notes.trim()) {
       handleSaveNote();
     }
   }
@@ -44,22 +42,32 @@ function Right({ selectedgroup,Goback }) {
       const updatedNotes = [...groupNotes, newNote]; 
       setGroupNotes(updatedNotes); 
 
-      
       localStorage.setItem(selectedgroup.name, JSON.stringify(updatedNotes));
       setNotes(''); 
     }
   };
 
+  // Function to get the initials based on the group name
+  const getInitials = (name) => {
+    const words = name.split(' ');
+    if (words.length === 1) {
+      // If one word, take the first two letters
+      return words[0].slice(0, 2).toUpperCase();
+    } else {
+      // If multiple words, take the first letter of each word
+      return words.map(word => word.charAt(0).toUpperCase()).join('');
+    }
+  }
+
   return (
     <div className="right-container">
-    
       <div className="group-header">
         <FaArrowLeft className='back' onClick={Goback} />
         <span
           className="group-circle"
           style={{ backgroundColor: selectedgroup.color }}
         >
-          {selectedgroup.name.split(' ').map(word => word.charAt(0).toUpperCase()).join('')}
+          {getInitials(selectedgroup.name)} {/* Display initials */}
         </span>
         <span className="group-name">{selectedgroup.name}</span>
       </div>
@@ -81,7 +89,6 @@ function Right({ selectedgroup,Goback }) {
         </ul>
       </div>
 
-    
       <div className="input-section">
         <textarea
           value={notes}
@@ -90,8 +97,8 @@ function Right({ selectedgroup,Goback }) {
           placeholder="Type your note here..." 
         />
         <IoSend className="send" onClick={handleSaveNote} 
-        style={{color: notes.trim() ? '#001F8B' : '#ccc',}}
-        disabled={!notes.trim()} />
+          style={{ color: notes.trim() ? '#001F8B' : '#ccc' }}
+        />
       </div>
     </div>
   );

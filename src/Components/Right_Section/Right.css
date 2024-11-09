@@ -73,7 +73,7 @@ textarea::placeholder {
   height: 30px;
   width: 30px;
   position: relative;
-  top: 30%;
+  top: 25%;
   left: -5%;
   cursor: pointer;
 }
@@ -168,7 +168,7 @@ textarea::placeholder {
     position: relative;
     color: #001F8B;
     top: 28%;
-    left: -10%;
+    left: -13%;
     cursor: pointer;
   }
 }

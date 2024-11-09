@@ -47,14 +47,14 @@ function Right({ selectedgroup, Goback }) {
     }
   };
 
-  // Function to get the initials based on the group name
+  
   const getInitials = (name) => {
     const words = name.split(' ');
     if (words.length === 1) {
-      // If one word, take the first two letters
+      
       return words[0].slice(0, 2).toUpperCase();
     } else {
-      // If multiple words, take the first letter of each word
+      
       return words.map(word => word.charAt(0).toUpperCase()).join('');
     }
   }

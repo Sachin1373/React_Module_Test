@@ -87,7 +87,7 @@ function Right({ selectedgroup,Goback }) {
           value={notes}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          placeholder="Type your note here..."
+          placeholder="Type your note here..." 
         />
         <IoSend className="send" onClick={handleSaveNote} 
         style={{color: notes.trim() ? '#001F8B' : '#ccc',}}

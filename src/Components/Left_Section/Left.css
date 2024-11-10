@@ -30,7 +30,7 @@ body {
 .left-container {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 50%;
   max-width: 425px;
   height: 100vh;
   padding: 30px;
@@ -45,7 +45,7 @@ body {
   font-weight: 500;
   line-height: 41.02px;
   letter-spacing: 0.02em;
-  margin-left: 60px;
+  margin-left: 50px;
 }
 
 .createbtn{

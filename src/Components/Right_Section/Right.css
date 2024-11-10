@@ -138,10 +138,12 @@ textarea::placeholder {
   }
   .back{
     display: block;
+    cursor: pointer;
   }
   .group-circle{
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
   }
   .notes-section {
     width: 100%;
@@ -169,8 +171,6 @@ textarea::placeholder {
 
   .input-section textarea {
     width: 100%;
-    
-   
   }
 
   .send {

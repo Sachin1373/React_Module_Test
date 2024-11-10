@@ -20,14 +20,21 @@ function Left({ setSelectedGroup }) {
   const closeModal = () => setModal(false);
 
   const getInitials = (name) => {
-    return name.split(' ').map(word => word.charAt(0).toUpperCase()).join('');
+    const words = name.split(' ');
+    if (words.length === 1) {
+      
+      return words[0].slice(0, 2).toUpperCase();
+    } else {
+      
+      return words.map(word => word.charAt(0).toUpperCase()).join('');
+    }
   };
 
   const handleGroups = (name, color) => {
     if (name && color) {
       const newGroup = { name, color };
     
-      const groupExists = groups.some(group => group.name === name);
+      const groupExists = groups.some(group => group.name.toUpperCase() === name.toUpperCase());
       
       if (groupExists) {
         return; 

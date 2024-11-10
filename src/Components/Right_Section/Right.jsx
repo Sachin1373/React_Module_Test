@@ -67,7 +67,7 @@ function Right({ selectedgroup, Goback }) {
           className="group-circle"
           style={{ backgroundColor: selectedgroup.color }}
         >
-          {getInitials(selectedgroup.name)} {/* Display initials */}
+          {getInitials(selectedgroup.name)} 
         </span>
         <span className="group-name">{selectedgroup.name}</span>
       </div>

@@ -66,7 +66,7 @@ const CreateGroupModal = ({ closeModal, onCreateGroup }) => {
 
         <button onClick={handleCreate} className="create-button"
         style={{backgroundColor: groupName.trim() && selectedColor.trim() ? '#16008B' : '#ccc',}}
-        disabled={!groupName.trim()}
+        disabled={!groupName.trim() || groupName.length < 2}
         >Create</button>
       </div>
     </div>

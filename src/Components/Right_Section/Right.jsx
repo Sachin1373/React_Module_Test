@@ -49,14 +49,7 @@ function Right({ selectedgroup, Goback }) {
 
   
   const getInitials = (name) => {
-    const words = name.split(' ');
-    if (words.length === 1) {
-      
-      return words[0].slice(0, 2).toUpperCase();
-    } else {
-      
-      return words.map(word => word.charAt(0).toUpperCase()).join('');
-    }
+   return name.slice(0,2).toUpperCase();
   }
 
   return (

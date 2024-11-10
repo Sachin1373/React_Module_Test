@@ -36,7 +36,6 @@ body {
   padding: 30px;
   background-color: #ffff;
   overflow-y: auto;
-  position: relative;
   box-sizing: border-box;
 }
 
@@ -105,7 +104,7 @@ body {
 
 @media (max-width: 768px) {
   .left-container {
-      width: 100%; 
+      width: 100vh; 
       padding: 15px;
       height: 100vh;
       
@@ -121,5 +120,9 @@ body {
 
   .group-name {
       font-size: 18px; 
+  }
+  .createbtn img{
+    height: 60px;
+    width: 60px;
   }
 }

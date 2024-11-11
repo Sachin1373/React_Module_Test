@@ -14,7 +14,6 @@ function Left({ setSelectedGroup }) {
   }, []);
 
   const openModal = () =>  {
-    console.log("Opening modal...");
     setModal(true)
   }
   const closeModal = () => setModal(false);

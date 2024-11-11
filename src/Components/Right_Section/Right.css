@@ -87,33 +87,37 @@ textarea::placeholder {
   padding-left: 20px;
   overflow-y: auto;
   overflow-x: hidden; 
+  
 }
 
 .notes-section ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-right: 15px;
   margin-bottom: 15px;
+  padding-right: 10px;
+  
 }
 
 .notes-section li {
   display: flex;
   position: relative;
   background-color: white;
-  height: auto;
+  width: calc(100% - 20px); 
   font-family: "Roboto";
-  padding-top: 20px;
+  padding: 20px;
   padding-bottom: 45px;
   border-radius: 5px;
   list-style: none;
   box-shadow: 0px 4px 20px 0px #00000040;
+  box-sizing: border-box;
+  overflow: hidden; 
 }
 
 .date-time {
   position: absolute;
   bottom: 10px;
-  right: 30px;
+  right: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -129,6 +133,8 @@ textarea::placeholder {
 
 .note-text {
   margin-left: 20px;
+  overflow-wrap: break-word; 
+  word-break: break-word;
 }
 
 

@@ -60,8 +60,8 @@ body {
 
 .createbtn{
   position: sticky;
-  bottom: 10px;
-  right: auto;
+  bottom: 30px;
+  right: 30px;
   cursor: pointer;
   margin-left: auto;
 }
@@ -134,5 +134,6 @@ body {
   .createbtn img{
     height: 60px;
     width: 60px;
+    margin-right: 20px;
   }
 }

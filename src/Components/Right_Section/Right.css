@@ -105,7 +105,7 @@ textarea::placeholder {
   background-color: white;
   width: calc(100% - 20px); 
   font-family: "Roboto";
-  padding: 20px;
+  padding-top: 20px;
   padding-bottom: 45px;
   border-radius: 5px;
   list-style: none;

@@ -33,19 +33,29 @@ body {
   width: 50%;
   max-width: 425px;
   height: 100vh;
-  padding: 30px;
   background-color: #ffff;
   overflow-y: auto;
-  box-sizing: border-box;
-}
 
+}
+.heading{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+ 
+}
 .left-container p{
   font-family: Roboto;
   font-size: 35px;
   font-weight: 500;
   line-height: 41.02px;
   letter-spacing: 0.02em;
-  margin-left: 50px;
+  padding-top: 25px;
+  height: 100px;
 }
 
 .createbtn{
@@ -63,8 +73,7 @@ body {
 
 .group-list {
   list-style: none;
-  padding: 0;
-  margin-top: 35px;
+  padding: 20px;
   flex-grow: 1; 
 }
 
@@ -104,9 +113,10 @@ body {
 
 @media (max-width: 768px) {
   .left-container {
-      width: 100vh; 
-      padding: 15px;
+      width: 100%; 
+      max-width: none;
       height: 100vh;
+     
       
   }
   .left-container p{

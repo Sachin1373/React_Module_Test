@@ -51,7 +51,9 @@ function Left({ setSelectedGroup }) {
   return (
     <>
       <div className="left-container">
-        <p>Pocket Notes</p>
+        <div className="heading">
+          <p>Pocket Notes</p>
+        </div>
         <ul className="group-list">
           {groups.map((group, index) => (
             <li 
